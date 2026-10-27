@@ -15,9 +15,15 @@ python3 -m http.server 8000
 
 ## Déployer
 
-N'importe quel hébergement statique convient (GitHub Pages, Netlify, Vercel, OVH…) : publier la racine du dépôt.
-Une fois le nom de domaine connu, ajouter dans `index.html` une balise `<link rel="canonical">`, une image
-`og:image` (URL absolue) et un `sitemap.xml`.
+Le site est publié sur **GitHub Pages** par le workflow `.github/workflows/pages.yml` : à chaque push sur `main`,
+il publie `index.html` et `assets/` (et rien d'autre). Adresse par défaut :
+`https://loopifyagency.github.io/site-le-cabinet-des-fees-brest/`.
+
+Réglage à faire une seule fois : *Settings → Pages → Build and deployment → Source : **GitHub Actions***.
+Pour un nom de domaine personnalisé : *Settings → Pages → Custom domain*, puis ajouter dans `index.html` une balise
+`<link rel="canonical">`, une image `og:image` (URL absolue) et un `sitemap.xml`.
+
+N'importe quel autre hébergement statique convient aussi (Netlify, Vercel, OVH…) : publier `index.html` et `assets/`.
 
 ## Direction artistique
 
